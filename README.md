@@ -2,7 +2,7 @@
 
 Build instructions for [BedrockConnect](https://github.com/Pugmatt/BedrockConnect)
 
-Update the version variable in ```.enc``` to a matching [release version](https://github.com/Pugmatt/BedrockConnect/releases)
+Update the version variable in ```.env``` to a matching [release version](https://github.com/Pugmatt/BedrockConnect/releases)
 
 ## Manual Build
 
