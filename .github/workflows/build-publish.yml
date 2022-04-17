@@ -49,10 +49,10 @@ jobs:
         with:
           push: true
           context: .
-          build-args: |
-            VERSION=${{ steps.dotEnv.outputs.version }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            VERSION=${{ steps.dotEnv.outputs.version }}
 
 
       
