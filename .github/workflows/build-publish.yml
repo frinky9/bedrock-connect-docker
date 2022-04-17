@@ -49,8 +49,10 @@ jobs:
         with:
           push: true
           context: .
-          tags: ${{ steps.meta.output.tags }}
-          labels: ${{ steps.meta.output.labels }}
+          build-args: |
+            VERSION=${{ steps.dotEnv.outputs.version }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
 
 
       
