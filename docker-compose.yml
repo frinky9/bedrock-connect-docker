@@ -1,0 +1,20 @@
+version: "3.9"
+
+# Common Base Image
+x-base:
+    &default
+    image: frinky9/bedrock-connect
+    build:
+      context: .
+      args:
+        VERSION: ${version}
+    
+
+services:
+  # Retag Latest Image
+  latest:
+    *default
+  # tag versioned Image
+  versioned:
+    <<: *default
+    image: frinky9/bedrock-connect:${version}
