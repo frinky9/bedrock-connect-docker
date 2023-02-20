@@ -3,7 +3,7 @@ FROM busybox AS BUILD
 ARG VERSION=1.6.1
 ARG JAR=https://github.com/Pugmatt/BedrockConnect/releases/download/$VERSION/BedrockConnect-1.0-SNAPSHOT.jar
 
-RUN wget $JAR -O /tmp/BedrockConnect.jar 
+RUN wget $JAR -O /tmp/BedrockConnect.jar --no-check-certificate
 
 FROM adoptopenjdk/openjdk11:alpine-jre
 
