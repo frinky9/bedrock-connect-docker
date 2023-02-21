@@ -1,9 +1,9 @@
-FROM busybox AS BUILD
+FROM busybox:uclibc AS BUILD
 
 ARG VERSION=1.6.1
 ARG JAR=https://github.com/Pugmatt/BedrockConnect/releases/download/$VERSION/BedrockConnect-1.0-SNAPSHOT.jar
 
-RUN wget $JAR -O /tmp/BedrockConnect.jar --no-check-certificate
+RUN wget $JAR -O /tmp/BedrockConnect.jar
 
 FROM adoptopenjdk/openjdk11:alpine-jre
 
