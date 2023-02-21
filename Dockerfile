@@ -1,4 +1,4 @@
-FROM busybox:uclibc AS BUILD
+FROM alpine AS BUILD
 
 ARG VERSION=1.6.1
 ARG JAR=https://github.com/Pugmatt/BedrockConnect/releases/download/$VERSION/BedrockConnect-1.0-SNAPSHOT.jar
